@@ -1,34 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useEffect } from 'react';
+import { Layout } from 'antd';
+import styled from 'styled-components';
+import "react-image-gallery/styles/css/image-gallery.css";
+import "antd/dist/reset.css";
+import Gallery from "./components/gallery";
+import Greeting from "./components/greeting";
+import Title from "./components/title";
+import GroovePaper from "./assets/GroovePaper.png";
+import Location from "./components/location";
+import CongratulatoryMoney from "./components/congratulatoryMoney";
+import Share from "./components/share";
+import Quote from "./components/quote";
+import Song from "./assets/song.mp3";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import './App.css'
 
+
+// markup
+const { Footer } = Layout;
+
+const Wrapper = styled.div`
+  // background: #efebe9;
+  background-image: url(${GroovePaper});
+  width: 100%;
+`;
+
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://developers.kakao.com/sdk/js/kakao.min.js";
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  });
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Wrapper>
+      <audio autoPlay loop>
+        <source src={Song} />
+      </audio>
+      <Title />
+      <Greeting />
+      <Gallery />
+      <Location />
+      <Quote />
+      <CongratulatoryMoney />
+      <Share />
+      <Footer
+        style={{
+          background: "#D7CCC8",
+          backgroundImage: `url(${GroovePaper})`,
+          opacity: 0.6,
+          textAlign: "center",
+        }}
+      >
+        <b>Copyright © 2024 helperwoo</b>
+      </Footer>
+    </Wrapper>
   )
 }
 

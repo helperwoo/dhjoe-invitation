@@ -1,0 +1,25 @@
+{
+    "url": "https://invite.helperwoo.kr",
+    "date": "2024년 11월 30일 토요일 오후 3시 30분",
+    "location": "파로스컨벤션 12F 그랜드볼룸",
+    "groom": {
+        "name": "조동현",
+        "account": "국민은행 263102-04-144406",
+        "f_name": "",
+        "f_account": "",
+        "m_name": "이순옥",
+        "m_account": "국민은행 799701-00-099398"
+    },
+    "bride": {
+        "name": "황서희",
+        "account": "국민은행 427901-01-254891",
+        "f_name": "",
+        "f_account": "",
+        "m_name": "박윤경",
+        "m_account": "국민은행 355-21-0166-981"
+    },
+    "kakao": {
+        "api_token": "32ea95cd547d25015dbaa3b125d21376",
+        "share_img": "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_960_720.jpg"
+    }
+}
