@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import config from "../assets/json/config.json";
 import BackgroundVideo from "../assets/sounds/BackgroundVideo.mp4";
 
 const Layout = styled.div`
@@ -76,7 +75,6 @@ const Title = () => {
             <br />
             day
           </WeddingInvitation>
-          {/* {config.groom.name} &#38; {config.bride.name} */}
         </GroomBride>
       </TitleWrapper>
       <VideoBackground autoPlay loop muted playsInline={true}>
