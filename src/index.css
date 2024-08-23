@@ -9,6 +9,14 @@
 }
 
 @font-face {
+  font-family: "Amarillo";
+  src: url("./assets/fonts/Amarillo.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "bgr";
   src: url("./assets/fonts/bgr.ttf");
   font-weight: normal;

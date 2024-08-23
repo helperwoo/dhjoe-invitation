@@ -3,17 +3,20 @@ import config from "../assets/json/config.json";
 import BackgroundVideo from "../assets/sounds/BackgroundVideo.mp4";
 
 const Layout = styled.div`
-  width: 90%;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
 `;
 
 const TitleWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
   width: 100%;
   text-align: center;
   padding-top: 42px;
   font-weight: 500 !important;
-  color: var(--title-color);
+  color: white;
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
   -webkit-animation: fadein 3s; /* Safari and Chrome */
@@ -24,9 +27,17 @@ const VideoBackground = styled.video`
   width: 100%;
 `;
 
+const WeddingName = styled.p`
+  color: #fff0d0;
+  font-size: 1rem;
+`;
+
 const WeddingInvitation = styled.p`
-  font-size: 0.825rem;
-  opacity: 0.45;
+  font-family: Amarillo;
+  font-weight: normal;
+  color: #fff0d0;
+  font-size: 2.3rem;
+  line-height: 4rem;
   margin-bottom: 16px;
 `;
 
@@ -56,9 +67,16 @@ const Title = () => {
   return (
     <Layout>
       <TitleWrapper>
-        <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>
-          {config.groom.name} &#38; {config.bride.name}
+          <WeddingName>DONG HYUN and SEO HEE</WeddingName>
+          <WeddingInvitation>
+            our
+            <br />
+            wedding
+            <br />
+            day
+          </WeddingInvitation>
+          {/* {config.groom.name} &#38; {config.bride.name} */}
         </GroomBride>
       </TitleWrapper>
       <VideoBackground autoPlay loop muted playsInline={true}>
@@ -66,7 +84,7 @@ const Title = () => {
       </VideoBackground>
       <ScheduleWrapper>
         <Schedule>
-          <b>2024년 11월 30일 토요일 오후 3시 30분</b>
+          <b>2024년 11월 30일 토요일 오후 3시30분</b>
           <br />
           <b>파로스컨벤션</b>
           <br />

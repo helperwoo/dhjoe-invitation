@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const Title = styled.span`
   font-size: 1rem;
   color: var(--title-color);
-  font-weight: bold;
+  // font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
 `;

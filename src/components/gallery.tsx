@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const Title = styled.p`
   font-size: 1rem;
   color: var(--title-color);
-  font-weight: bold;
+  // font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
   text-align: center;

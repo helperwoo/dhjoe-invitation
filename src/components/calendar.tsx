@@ -107,7 +107,7 @@ const Calendar = () => {
                             fontSize: 9,
                             color: 'black',
                         }}>
-                            오후 3시 반
+                            오후 3시30분
                         </span>
                     </Day>
                 </Row>

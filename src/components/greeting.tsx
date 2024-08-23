@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 const Title = styled.p`
   font-size: 1rem;
   color: var(--title-color);
-  font-weight: bold;
+  // font-weight: bold;
   opacity: 0.85;
   margin-bottom: 0;
   text-align: center;
@@ -39,7 +39,7 @@ const Greeting = () => {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 32, marginBottom: 32 }} plain>
-        <Title data-aos="fade-up">소중한 분들을 초대합니다.</Title>
+        <Title data-aos="fade-up">소중한 분들을 초대합니다</Title>
       </Divider>
       <Content data-aos="fade-up">
         단풍잎이 짙에 물드는 가을
@@ -67,13 +67,13 @@ const Greeting = () => {
         <div>
           <span style={{fontSize: 11, color: "#7ca0ad"}}>신랑</span> {config.groom.name}
           <br />
-          <span style={{fontSize: 11}}>{config.groom.m_name}의 아들</span>
+          <span style={{fontSize: 11}}>{config.groom.m_name}의 장남</span>
         </div>
         <br />
         <div>
           <span style={{fontSize: 11, color: "#cd9b9c"}}>신부</span> {config.bride.name}
           <br />
-          <span style={{fontSize: 11}}>{config.bride.f_name}, {config.bride.m_name}의 딸</span>
+          <span style={{fontSize: 11}}>{config.bride.f_name}, {config.bride.m_name}의 차녀</span>
         </div>
       </GroomBride>
     </Wrapper>
