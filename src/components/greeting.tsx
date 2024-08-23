@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Divider } from "antd";
-import Flower from "../assets/flower1.png";
 import config from "../assets/json/config.json";
 
 const Wrapper = styled.div`
-  padding-top: 42px;
+  // padding-top: 42px;
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
 `;
 
 const Title = styled.p`
@@ -36,39 +35,43 @@ const GroomBride = styled.p`
   text-align: center;
 `;
 
-const Image = styled.img`
-  display: block;
-  margin: 0 auto;
-  width: 1.375rem;
-  padding-bottom: 42px;
-`;
-
 const Greeting = () => {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 32, marginBottom: 32 }} plain>
-        <Title data-aos="fade-up">초대합니다</Title>
+        <Title data-aos="fade-up">소중한 분들을 초대합니다.</Title>
       </Divider>
-      <Image data-aos="fade-up" src={Flower} />
       <Content data-aos="fade-up">
-        서로 마주 보며 다져온 사랑을
+        함께 있을 때 가장 나다운 모습이 되고
+        <br />
+        함께 있을 때 미래를 꿈꾸게 하는 사람을 만나
+        <br />
+        함께 맞는 4 번째 가을, 결혼합니다.
         <br />
         <br />
-        이제 함께 한곳을 바라보며 걸어갈 수 있는
+        지금처럼 서로에게 가장 친한 친구가 되어
+        <br />
+        예쁘고 행복하게 잘 살겠습니다.
         <br />
         <br />
-        큰 사랑으로 키우고자 합니다.
+        저희 두 사람의 새로운 시작을
+        <br />
+        함께하시어 축복해 주시면 감사하겠습니다.
         <br />
         <br />
-        저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게
-        <br />
-        <br />
-        앞날을 축복해 주시면 감사하겠습니다.
       </Content>
       <GroomBride data-aos="fade-up">
-        {config.groom.f_name} · {config.groom.m_name}의 장남 {config.groom.name}
+        <div>
+          <span style={{fontSize: 11, color: "#7ca0ad"}}>신랑</span> {config.groom.name}
+          <br />
+          <span style={{fontSize: 11}}>{config.groom.m_name}의 아들</span>
+        </div>
         <br />
-        {config.bride.f_name} · {config.bride.m_name}의 장녀 {config.bride.name}
+        <div>
+          <span style={{fontSize: 11, color: "#cd9b9c"}}>신부</span> {config.bride.name}
+          <br />
+          <span style={{fontSize: 11}}>{config.bride.m_name}의 딸</span>
+        </div>
       </GroomBride>
     </Wrapper>
   );

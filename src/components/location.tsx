@@ -5,7 +5,7 @@ import Flower from "../assets/flower2.png";
 
 const Wrapper = styled.div`
   padding-top: 42px;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 `;
 
@@ -37,75 +37,53 @@ const Content = styled.p`
 
 const Map = styled.div`
   width: 100%;
+  height: 50vw;
   padding: 0;
 `;
 
 const Location = () => {
-  // 카카오 맵 불러오기
-
-  // <!-- 3. 실행 스크립트 -->
-  const executeScript = () => {
-    const scriptTag = document.createElement("script");
-    const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
-    "timestamp" : "1652464367301",
-    "key" : "2a8fe",
-    "mapWidth" : "640",
-    "mapHeight" : "360"
-  }).render();`);
-    scriptTag.appendChild(inlineScript);
-    document.body.appendChild(scriptTag);
-  };
-
-  // <!-- 2. 설치 스크립트 * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다. -->
-  // document.write 문제가 발생해서 해당 파일을 직접 가져온다음 수정했음
-  const InstallScript = () => {
-    (function () {
-      let c = window.location.protocol === "https:" ? "https:" : "http:";
-      let a = "16137cec";
-
-      // @ts-ignore
-      if (window.daum && window.daum.roughmap && window.daum.roughmap.cdn) return;
-      // @ts-ignore
-      window.daum = window.daum || {};
-      // @ts-ignore
-      window.daum.roughmap = {
-        cdn: a,
-        URL_KEY_DATA_LOAD_PRE: c + "//t1.daumcdn.net/roughmap/",
-        url_protocal: c,
-      };
-      let b =
-        c +
-        "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
-        a +
-        "/roughmapLander.js";
-
-      // document.write -> doumnet.body.append로 수정
-      const scriptTag = document.createElement("script");
-      scriptTag.src = b;
-      scriptTag.classList.add("daum_roughmap_loader_script");
-      scriptTag.src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js";
-      document.body.append(scriptTag);
-      scriptTag.onload = () => {
-        executeScript();
-      };
-    })();
-  };
 
   useEffect(() => {
-    InstallScript();
-  }, [InstallScript]);
+    const script = document.createElement("script");
+    script.classList.add("daum_roughmap_loader_script");
+    script.src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js";
+    script.async = true;
+    document.body.appendChild(script);
+    script.addEventListener("load", () => executeScript());
+  }, []);
+
+  const executeScript = () => {
+    const lat = 37.61155222784165;
+    const lng = 127.15230408526648;
+    var container = document.getElementById('map');
+		var options = {
+      // @ts-ignore
+			center: new kakao.maps.LatLng(lat, lng),
+			level: 4
+		};
+
+    // @ts-ignore
+    // 지도를 생성합니다
+		var map = new kakao.maps.Map(container, options);
+
+    // @ts-ignore
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(lat, lng);
+
+      // @ts-ignore
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({ position: markerPosition });
+    marker.setMap(map);
+  };
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider data-aos="fade-up" plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>오시는 길</Title>
       </Divider>
-      <Image src={Flower} />
-      <Map
-        id="daumRoughmapContainer1724316380508"
-        className="root_daum_roughmap root_daum_roughmap_landing"
-      ></Map>
-      <Content>
+      <Image data-aos="fade-up" src={Flower} />
+      <Map id="map" data-aos="fade-up" />
+      <Content data-aos="fade-up">
         경기 남양주시 다산순환로 20
         <br />
         다산현대프리미어캠퍼스몰 E동 2층 파로스컨벤션
@@ -136,24 +114,3 @@ const Location = () => {
 };
 
 export default Location;
-
-
-// <!-- * 카카오맵 - 지도퍼가기 -->
-// <!-- 1. 지도 노드 -->
-// <div id="daumRoughmapContainer1724316380508" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-// <!--
-// 	2. 설치 스크립트
-// 	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-// -->
-// <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-// <!-- 3. 실행 스크립트 -->
-// <script charset="UTF-8">
-// 	new daum.roughmap.Lander({
-// 		"timestamp" : "1724316380508",
-// 		"key" : "2kf9e",
-// 		"mapWidth" : "640",
-// 		"mapHeight" : "360"
-// 	}).render();
-// </script>

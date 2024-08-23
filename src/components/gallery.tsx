@@ -10,7 +10,7 @@ import GalleryPhoto6 from "../assets/Gallery_Photo_6.webp";
 
 const Wrapper = styled.div`
   padding-top: 42px;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 `;
 
@@ -52,7 +52,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <Wrapper>
+    <Wrapper data-aos="fade-up">
       <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
         <Title>우리의 아름다운 순간</Title>
       </Divider>

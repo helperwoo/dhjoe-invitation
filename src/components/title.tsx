@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import config from "../assets/json/config.json";
-import BackgroundVideo from "../assets/BackgroundVideo.mp4";
-// import GroovePaper from "../assets/GroovePaper.png";
+import BackgroundVideo from "../assets/sounds/BackgroundVideo.mp4";
 
 const Layout = styled.div`
-  width: 70%;
+  width: 90%;
   overflow: hidden;
   margin: 0 auto;
 `;
@@ -38,10 +37,19 @@ const GroomBride = styled.p`
   margin-bottom: 16px;
 `;
 
+const ScheduleWrapper = styled.div`
+  width: 80%;
+  border-top: 1px solid var(--title-color);
+  border-bottom: 1px solid var(--title-color);
+  margin: 20px auto;
+`;
+
 const Schedule = styled.p`
-  font-size: 1.06rem;
+  font-size: 0.72rem;
+  line-height: 1.75;
   opacity: 0.65;
-  margin-bottom: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 `;
 
 const Title = () => {
@@ -52,15 +60,19 @@ const Title = () => {
         <GroomBride>
           {config.groom.name} &#38; {config.bride.name}
         </GroomBride>
-        <Schedule>
-          {config.date}
-          <br />
-          {config.location}
-        </Schedule>
       </TitleWrapper>
       <VideoBackground autoPlay loop muted playsInline={true}>
         <source src={BackgroundVideo} type="video/mp4" />
       </VideoBackground>
+      <ScheduleWrapper>
+        <Schedule>
+          2024년 11월 30일 토요일 오후 3시 30분
+          <br />
+          파로스컨벤션
+          <br />
+          2F 그랜드볼룸
+        </Schedule>
+      </ScheduleWrapper>
     </Layout>
   );
 };

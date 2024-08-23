@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   padding-top: 42px;
   width: 100%;
   text-align: center;
+  margin-bottom: 30px;
 `;
 
 const Title = styled.span`
@@ -58,16 +59,16 @@ const Share = () => {
 
       // 중복 initialization 방지
       if (!kakao.isInitialized()) {
-        // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
+      // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
         kakao.init(config.kakao.api_token);
       }
 
-      kakao.Share.createDefaultButton({
-        container: "#kakaotalk-sharing-btn",
-        objectType: "feed",
+      // @ts-ignore
+      kakao.Share.sendDefault({
+        objectType: 'feed',
         content: {
-          title: `${config.groom.name}❤${config.bride.name} 결혼식에 초대합니다`,
-          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
+          title: `${config.groom.name}♥${config.bride.name} 결혼합니다.`,
+          description: "11월 30일 토요일 오후 3시 30분",
           imageUrl: config.kakao.share_img,
           link: {
             mobileWebUrl: window.location.href,
@@ -76,50 +77,46 @@ const Share = () => {
         },
         buttons: [
           {
-            title: "청첩장 열기",
+            title: "청첩장 보기",
             link: {
               mobileWebUrl: window.location.href,
               webUrl: window.location.href,
             },
           },
+          {
+            title: "위치 보기",
+            link: {
+              mobileWebUrl: "http://www.pharosconvention.co.kr/location/",
+              webUrl: "http://www.pharosconvention.co.kr/location/",
+            },
+          },
         ],
-        installTalk: true,
       });
-
-      setTimeout(() => {
-        document.getElementById("sendKakao")?.click();
-        message.success("카카오톡으로 청첩장을 공유합니다!");
-      }, 100);
     }
   };
 
   return (
-    <Wrapper>
+    <Wrapper data-aos="fade-up">
       <Divider
-        data-aos="fade-up"
         plain
         style={{ marginTop: 0, marginBottom: 32 }}
       >
-        <Title>청첩장 공유하기</Title>
+        <Title>청첩장 공유</Title>
       </Divider>
       <KakaoTalkShareButton
-        style={{ margin: 0 }}
+        style={{ margin: 0, marginRight: 20 }}
         icon={<MessageFilled />}
         id="kakaotalk-sharing-btn"
         size="large"
-        onClick={createKakaoButton}
-      >
-        카카오톡으로 공유하기
-      </KakaoTalkShareButton>
+        onClick={() => createKakaoButton()}
+      />
       <CopyToClipboard text={config.url}>
         <LinkShareButton
           style={{ margin: 0 }}
           icon={<LinkOutlined />}
           size="large"
-          onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
-        >
-          링크로 공유하기
-        </LinkShareButton>
+          onClick={() => message.success("링크가 복사되었습니다.")}
+        />
       </CopyToClipboard>
     </Wrapper>
   );

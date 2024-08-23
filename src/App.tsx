@@ -9,14 +9,13 @@ import Greeting from "./components/greeting";
 import Title from "./components/title";
 import GroovePaper from "./assets/GroovePaper.png";
 import Location from "./components/location";
-import CongratulatoryMoney from "./components/congratulatoryMoney";
+import Money from "./components/money";
 import Share from "./components/share";
 import Quote from "./components/quote";
 import Song from "./assets/song.mp3";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './App.css'
-
 
 // markup
 const { Footer } = Layout;
@@ -28,17 +27,6 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://developers.kakao.com/sdk/js/kakao.min.js";
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   useEffect(() => {
     AOS.init({ duration: 1500 });
   });
@@ -53,13 +41,13 @@ function App() {
       <Gallery />
       <Location />
       <Quote />
-      <CongratulatoryMoney />
+      <Money />
       <Share />
       <Footer
         style={{
           background: "#D7CCC8",
           backgroundImage: `url(${GroovePaper})`,
-          opacity: 0.6,
+          opacity: 0.3,
           textAlign: "center",
         }}
       >
