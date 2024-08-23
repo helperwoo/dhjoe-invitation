@@ -24,6 +24,8 @@ const TitleWrapper = styled.div`
 
 const VideoBackground = styled.video`
   width: 100%;
+  height: 600px;
+  object-fit: fill;
 `;
 
 const WeddingName = styled.p`
