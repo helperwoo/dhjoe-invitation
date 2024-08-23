@@ -12,6 +12,7 @@ import Location from "./components/location";
 import Money from "./components/money";
 import Share from "./components/share";
 import Quote from "./components/quote";
+import Calendar from "./components/calendar";
 import Song from "./assets/song.mp3";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -38,6 +39,7 @@ function App() {
       </audio>
       <Title />
       <Greeting />
+      <Calendar />
       <Gallery />
       <Location />
       <Quote />

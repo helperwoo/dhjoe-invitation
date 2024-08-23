@@ -66,11 +66,11 @@ const Title = () => {
       </VideoBackground>
       <ScheduleWrapper>
         <Schedule>
-          2024년 11월 30일 토요일 오후 3시 30분
+          <b>2024년 11월 30일 토요일 오후 3시 30분</b>
           <br />
-          파로스컨벤션
+          <b>파로스컨벤션</b>
           <br />
-          2F 그랜드볼룸
+          <b>2F Pharos Hall</b>
         </Schedule>
       </ScheduleWrapper>
     </Layout>

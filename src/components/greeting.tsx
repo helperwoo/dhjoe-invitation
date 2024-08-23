@@ -42,21 +42,24 @@ const Greeting = () => {
         <Title data-aos="fade-up">소중한 분들을 초대합니다.</Title>
       </Divider>
       <Content data-aos="fade-up">
-        함께 있을 때 가장 나다운 모습이 되고
+        단풍잎이 짙에 물드는 가을
         <br />
-        함께 있을 때 미래를 꿈꾸게 하는 사람을 만나
+        따뜻한 햇살 아래에서
         <br />
-        함께 맞는 4 번째 가을, 결혼합니다.
+        아름다운 인연을 맺고자 합니다.
+        <br />
+        새 인생을 시작하는 두 사람을
+        <br />
+        가까이에서 축복해 주시면 더 없는 기쁨이 되겠습니다.
         <br />
         <br />
-        지금처럼 서로에게 가장 친한 친구가 되어
+        깊어가는 가을의 길목에서
         <br />
-        예쁘고 행복하게 잘 살겠습니다.
+        결혼이라는 길을 함께 걸어가려 합니다.
         <br />
+        저희가 내딛는 첫 걸음을
         <br />
-        저희 두 사람의 새로운 시작을
-        <br />
-        함께하시어 축복해 주시면 감사하겠습니다.
+        함께 축복해주시면 감사하겠습니다.
         <br />
         <br />
       </Content>
@@ -70,7 +73,7 @@ const Greeting = () => {
         <div>
           <span style={{fontSize: 11, color: "#cd9b9c"}}>신부</span> {config.bride.name}
           <br />
-          <span style={{fontSize: 11}}>{config.bride.m_name}의 딸</span>
+          <span style={{fontSize: 11}}>{config.bride.f_name}, {config.bride.m_name}의 딸</span>
         </div>
       </GroomBride>
     </Wrapper>

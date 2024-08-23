@@ -131,7 +131,7 @@ const Money = () => {
         }
         footer={[
           <Description>
-            계좌번호 클릭 시<br />붙여넣기 가능한 텍스트로 복사됩니다.
+            계좌번호 클릭시 붙여넣기 가능한 텍스트로 복사됩니다.
           </Description>
         ]}
       />
@@ -174,7 +174,7 @@ const Money = () => {
         }
         footer={[
           <Description>
-            계좌번호 클릭 시<br />붙여넣기 가능한 텍스트로 복사됩니다.
+            계좌번호 클릭시 붙여넣기 가능한 텍스트로 복사됩니다.
           </Description>
         ]}
       />

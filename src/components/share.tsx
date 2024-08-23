@@ -71,23 +71,23 @@ const Share = () => {
           description: "11월 30일 토요일 오후 3시 30분",
           imageUrl: config.kakao.share_img,
           link: {
-            mobileWebUrl: window.location.href,
-            webUrl: window.location.href,
+            mobileWebUrl: config.url,
+            webUrl: config.url,
           },
         },
         buttons: [
           {
             title: "청첩장 보기",
             link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href,
+              mobileWebUrl: config.url,
+              webUrl: config.url,
             },
           },
           {
             title: "위치 보기",
             link: {
-              mobileWebUrl: "http://www.pharosconvention.co.kr/location/",
-              webUrl: "http://www.pharosconvention.co.kr/location/",
+              mobileWebUrl: "https://map.kakao.com/?map_type=TYPE_MAP&itemId=124496353&q=%ED%8C%8C%EB%A1%9C%EC%8A%A4%EC%BB%A8%EB%B2%A4%EC%85%98&urlLevel=3&urlX=533615&urlY=1142238",
+              webUrl: "https://map.kakao.com/?map_type=TYPE_MAP&itemId=124496353&q=%ED%8C%8C%EB%A1%9C%EC%8A%A4%EC%BB%A8%EB%B2%A4%EC%85%98&urlLevel=3&urlX=533615&urlY=1142238",
             },
           },
         ],

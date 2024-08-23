@@ -84,30 +84,56 @@ const Location = () => {
       <Image data-aos="fade-up" src={Flower} />
       <Map id="map" data-aos="fade-up" />
       <Content data-aos="fade-up">
-        경기 남양주시 다산순환로 20
-        <br />
-        다산현대프리미어캠퍼스몰 E동 2층 파로스컨벤션
+        <b>파로스컨벤션 2층 파로스홀</b>
         <br />
         <br />
-        <Title>버스 이용시</Title>
+        경기 남양주시 다산순환로 20          
+        다산현대프리미어캠퍼스몰 E동 2층
         <br />
         <br />
-        ● 79, 95, 96, 99. 99-1, 170, 땡큐12, 땡큐50 도농고 정류장 하차 (정류장번호 : 23092, 49810)
-        <br />
-        ● 1006 현대아울렛 하차
-        <br />
-        <br />
-        <Title>지하철 이용시</Title>
+        <Divider />
+
+        <Title>버스</Title>
         <br />
         <br />
-        ● 8호선, 경의중앙성선 구리역 3번 출구
+        <span style={{color: "var(--title-color)"}}>●</span> 79, 95, 96, 99. 99-1, 170, 땡큐12, 땡큐50
         <br />
-        ● 경의중앙선 도농역 하차
-        2번 출구 - 버스 76번 - [도농고] 하차
+        도농고 정류장 하차 (정류장번호 : 23092, 49810)
+        <br />
+        <br />
+        <span style={{color: "var(--title-color)"}}>●</span> 1006
+        <br />
+        현대아울렛 하차
+        <br />
+        <br />
+        <Divider />
+
+        <Title>지하철</Title>
+        <br />
+        <br />
+        <span style={{color: "var(--title-color)"}}>●</span> 8호선, 경의중앙성선 : 구리역 3번 출구
+        <br />
+        <br />
+        <span style={{color: "var(--title-color)"}}>●</span> 경의중앙선 : 도농역 하차 2번 출구
+        <br />
+        버스 76번 - [도농고] 하차
+        <br />
         [도보시] 1번 출구 도보 15분
         <br />
-        ● 8호선 다산역 하차
-        4번 출구 - 버스 76번 승차 [도농고] 하차
+        <br />
+        <span style={{color: "var(--title-color)"}}>●</span> 8호선 : 다산역 하차 4번 출구
+        <br />
+        버스 76번 승차 [도농고] 하차
+        <br />
+        <br />
+        <Divider />
+
+        <Title>주차안내</Title>
+        <br />
+        <br />
+        <span style={{color: "var(--title-color)"}}>●</span> 파로스컨벤션 전용 주차장
+        <br />
+        GATE2 이용 <span style={{color: "var(--title-color)"}}>▶</span> 지하 3층~4층
       </Content>
     </Wrapper>
   );
