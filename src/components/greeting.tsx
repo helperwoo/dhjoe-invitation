@@ -42,7 +42,7 @@ const Greeting = () => {
         <Title data-aos="fade-up">소중한 분들을 초대합니다</Title>
       </Divider>
       <Content data-aos="fade-up">
-        단풍잎이 짙에 물드는 가을
+        단풍잎이 짙게 물드는 가을
         <br />
         따뜻한 햇살 아래에서
         <br />
