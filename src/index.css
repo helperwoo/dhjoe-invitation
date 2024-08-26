@@ -3,7 +3,7 @@
 }
 
 * {
-  font-family: "bgr", "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont,
+  font-family: "Bingre", "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -17,32 +17,32 @@
 }
 
 @font-face {
-  font-family: "bgr";
-  src: url("./assets/fonts/bgr.ttf");
+  font-family: "Bingre";
+  src: url("./assets/fonts/Bingre.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "bgr";
-  src: url("./assets/fonts/bgr-bold.ttf");
+  font-family: "Bingre";
+  src: url("./assets/fonts/Bingre-bold.ttf");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "bgrsmc";
-  src: url("./assets/fonts/bgrsmc.ttf");
+  font-family: "BingreSmc";
+  src: url("./assets/fonts/BingreSmc.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "bgrsmc";
-  src: url("./assets/fonts/bgrsmc-bold.ttf");
+  font-family: "BingreSmc";
+  src: url("./assets/fonts/BingreSmc-bold.ttf");
   font-weight: bold;
   font-style: normal;
   font-display: swap;

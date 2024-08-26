@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import QuotePaper from "../assets/Quote.png";
-import Flower from "../assets/flower1.png";
+import Flower from "../assets/flower.png";
 
 const Wrapper = styled.div`
   padding-top: 42px;
@@ -16,7 +16,7 @@ const Content = styled.span`
   display: block;
   margin: 0 auto;
   font-size: 1.3rem;
-  font-family: "bgr";
+  font-family: "bingre";
   text-align: center;
   color: var(--title-color);
   line-height: 2.25rem;

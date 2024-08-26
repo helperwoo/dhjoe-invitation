@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BackgroundVideo from "../assets/sounds/BackgroundVideo.mp4";
+import BackgroundVideo from "../assets/videos/BackgroundVideo.mp4";
 
 const Layout = styled.div`
   width: 100%;
