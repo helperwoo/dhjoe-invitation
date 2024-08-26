@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Divider } from "antd";
+import { PhoneOutlined, MessageOutlined } from "@ant-design/icons";
 import config from "../assets/json/config.json";
 
 const Wrapper = styled.div`
@@ -65,13 +66,27 @@ const Greeting = () => {
       </Content>
       <GroomBride data-aos="fade-up">
         <div>
-          <span style={{fontSize: 11, color: "#7ca0ad"}}>신랑</span> {config.groom.name}
+          <span style={{fontSize: 11, color: "#7ca0ad"}}>신랑 </span>
+          <span style={{marginLeft:6}}>{config.groom.name}</span>
+          <a href={"tel:01071126076"}>
+            <PhoneOutlined style={{marginLeft:20, color: "#7ca0ad"}} />
+          </a>
+          <a href={"sms:01071126076"}>
+            <MessageOutlined  style={{marginLeft:20, color: "#7ca0ad"}} />
+          </a>
           <br />
           <span style={{fontSize: 11}}>{config.groom.m_name}의 장남</span>
         </div>
         <br />
         <div>
-          <span style={{fontSize: 11, color: "#cd9b9c"}}>신부</span> {config.bride.name}
+          <span style={{fontSize: 11, color: "#cd9b9c"}}>신부 </span>
+          <span style={{marginLeft:6}}>{config.bride.name}</span>
+          <a href={"tel:01046644614"}>
+            <PhoneOutlined style={{marginLeft:20, color: "#cd9b9c"}} />
+          </a>
+          <a href={"sms:01046644614"}>
+            <MessageOutlined  style={{marginLeft:20, color: "#cd9b9c"}} />
+          </a>
           <br />
           <span style={{fontSize: 11}}>{config.bride.f_name}, {config.bride.m_name}의 차녀</span>
         </div>
