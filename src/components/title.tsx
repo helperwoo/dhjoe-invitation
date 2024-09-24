@@ -25,15 +25,15 @@ const TitleWrapper = styled.div`
 
 const WeddingName = styled.p`
   color: white;
-  font-size: 1rem;
+  font-size: 3.5vw;
 `;
 
 const WeddingInvitation = styled.p`
   font-family: Amarillo;
   font-weight: normal;
   color: white;
-  font-size: 2.3rem;
-  line-height: 4rem;
+  font-size: 8.1vw;
+  line-height: 13vw;
   margin-bottom: 16px;
 `;
 
