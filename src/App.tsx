@@ -7,7 +7,7 @@ import "antd/dist/reset.css";
 import Gallery from "./components/gallery";
 import Greeting from "./components/greeting";
 import Title from "./components/title";
-import GroovePaper from "./assets/GroovePaper.png";
+import GroovePaper from "./assets/images/GroovePaper.png";
 import Location from "./components/location";
 import Money from "./components/money";
 import Share from "./components/share";

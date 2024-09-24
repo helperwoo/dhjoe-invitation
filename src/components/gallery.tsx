@@ -1,12 +1,18 @@
 import ImageGallery from "react-image-gallery";
 import { Divider } from "antd";
 import styled from "styled-components";
-import GalleryPhoto1 from "../assets/Gallery_Photo_1.webp";
-import GalleryPhoto2 from "../assets/Gallery_Photo_2.webp";
-import GalleryPhoto3 from "../assets/Gallery_Photo_3.webp";
-import GalleryPhoto4 from "../assets/Gallery_Photo_4.webp";
-import GalleryPhoto5 from "../assets/Gallery_Photo_5.webp";
-import GalleryPhoto6 from "../assets/Gallery_Photo_6.webp";
+import photo1 from "../assets/images/photo1.jpg";
+import photo2 from "../assets/images/photo2.jpg";
+import photo3 from "../assets/images/photo3.jpg";
+import photo4 from "../assets/images/photo4.jpg";
+import photo5 from "../assets/images/photo5.jpg";
+import photo6 from "../assets/images/photo6.jpg";
+import photo7 from "../assets/images/photo7.jpg";
+import photo8 from "../assets/images/photo8.jpg";
+import photo9 from "../assets/images/photo9.jpg";
+import photo10 from "../assets/images/photo10.jpg";
+import photo11 from "../assets/images/photo11.jpg";
+
 
 const Wrapper = styled.div`
   padding-top: 42px;
@@ -23,31 +29,18 @@ const Title = styled.p`
   text-align: center;
 `;
 
-const images = [
-  {
-    original: GalleryPhoto1,
-    thumbnail: GalleryPhoto1,
-  },
-  {
-    original: GalleryPhoto2,
-    thumbnail: GalleryPhoto2,
-  },
-  {
-    original: GalleryPhoto3,
-    thumbnail: GalleryPhoto3,
-  },
-  {
-    original: GalleryPhoto4,
-    thumbnail: GalleryPhoto4,
-  },
-  {
-    original: GalleryPhoto5,
-    thumbnail: GalleryPhoto5,
-  },
-  {
-    original: GalleryPhoto6,
-    thumbnail: GalleryPhoto6,
-  },
+const images: any[] = [
+  { original: photo1, thumbnail: photo1 },
+  { original: photo2, thumbnail: photo2 },
+  { original: photo3, thumbnail: photo3 },
+  { original: photo4, thumbnail: photo4 },
+  { original: photo5, thumbnail: photo5 },
+  { original: photo6, thumbnail: photo6 },
+  { original: photo7, thumbnail: photo7 },
+  { original: photo8, thumbnail: photo8 },
+  { original: photo9, thumbnail: photo9 },
+  { original: photo10, thumbnail: photo10 },
+  { original: photo11, thumbnail: photo11 },
 ];
 
 const Gallery = () => {
@@ -59,6 +52,7 @@ const Gallery = () => {
       <ImageGallery
         showPlayButton={false}
         showFullscreenButton={false}
+        disableSwipe
         items={images}
       />
     </Wrapper>

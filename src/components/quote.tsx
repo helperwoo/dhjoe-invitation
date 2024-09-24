@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import QuotePaper from "../assets/Quote.png";
-import Flower from "../assets/flower.png";
+import QuotePaper from "../assets/images/Quote.png";
+import Flower from "../assets/images/flower.png";
 
 const Wrapper = styled.div`
   padding-top: 42px;

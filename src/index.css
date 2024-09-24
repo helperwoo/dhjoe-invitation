@@ -65,6 +65,29 @@
   display: none !important;
 }
 
+.image-gallery-image {
+  width: 99% !important;
+  height: 600px;
+  object-fit: contain;
+}
+
+.image-gallery-thumbnail {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border: 4px solid var(--title-color);
+}
+
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+  position: relative;
+  height: 100px;
+  object-fit: cover;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

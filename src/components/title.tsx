@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HeaderImage from "../assets/images/photo2.jpg";
 import BackgroundVideo from "../assets/videos/BackgroundVideo.mp4";
 
 const Layout = styled.div`
@@ -29,14 +30,14 @@ const VideoBackground = styled.video`
 `;
 
 const WeddingName = styled.p`
-  color: #fff0d0;
+  color: white;
   font-size: 1rem;
 `;
 
 const WeddingInvitation = styled.p`
   font-family: Amarillo;
   font-weight: normal;
-  color: #fff0d0;
+  color: white;
   font-size: 2.3rem;
   line-height: 4rem;
   margin-bottom: 16px;
@@ -50,7 +51,7 @@ const GroomBride = styled.p`
 `;
 
 const ScheduleWrapper = styled.div`
-  width: 80%;
+  width: 60%;
   border-top: 1px solid var(--title-color);
   border-bottom: 1px solid var(--title-color);
   margin: 20px auto;
@@ -79,16 +80,15 @@ const Title = () => {
           </WeddingInvitation>
         </GroomBride>
       </TitleWrapper>
-      <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src={BackgroundVideo} type="video/mp4" />
-      </VideoBackground>
+      <img src={HeaderImage} style={{maxWidth: "448px", width: "100%", opacity: 1}} />
+      <source src={BackgroundVideo} type="video/mp4" />
       <ScheduleWrapper>
         <Schedule>
-          <b>2024년 11월 30일 토요일 오후 3시30분</b>
+          2024년 11월 30일 토요일 오후 3시30분
           <br />
-          <b>파로스컨벤션</b>
+          파로스컨벤션
           <br />
-          <b>2F Pharos Hall</b>
+          2F Pharos Hall
         </Schedule>
       </ScheduleWrapper>
     </Layout>
