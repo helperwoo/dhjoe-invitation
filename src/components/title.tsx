@@ -23,12 +23,6 @@ const TitleWrapper = styled.div`
   -o-animation: fadein 3s; /* Opera */
 `;
 
-const VideoBackground = styled.video`
-  width: 100%;
-  height: 600px;
-  object-fit: fill;
-`;
-
 const WeddingName = styled.p`
   color: white;
   font-size: 1rem;
