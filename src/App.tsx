@@ -23,6 +23,7 @@ const { Footer } = Layout;
 
 const Wrapper = styled.div`
   // background: #efebe9;
+  position: relative;
   background-image: url(${GroovePaper});
   width: 100%;
 `;
